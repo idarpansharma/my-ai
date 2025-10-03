@@ -1,0 +1,17 @@
+# netlify.toml
+
+[build]
+  # This command tells Netlify to install the dependencies from your requirements.txt
+  command = "pip install -r requirements.txt"
+  # This specifies the directory where your serverless function is located.
+  functions = "functions/"
+
+[functions]
+  # This tells Netlify to include all files from your project directory in the function.
+  included_files = ["**"]
+
+[[redirects]]
+  # This rule routes all incoming traffic to our single serverless function.
+  from = "/*"
+  to = "/.netlify/functions/netlify_handler"
+  status = 200

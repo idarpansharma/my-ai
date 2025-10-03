@@ -673,6 +673,16 @@ input:checked+.slider:before {
 @media (max-width: 768px) {
     .chatbot-container {
         flex-direction: column;
+        /* This is the key: ensure the container itself has a defined height */
+        height: 100%;
+    }
+
+    .chat-area {
+        /* Override the desktop 100vh and let flexbox manage the height.
+           This ensures it fills the container but doesn't overflow the screen. */
+        height: 100%;
+        min-height: 0;
+        /* Important for flexbox children */
     }
 
     .sidebar {
@@ -728,7 +738,8 @@ input:checked+.slider:before {
 
 /* --- Agent Status Indicator --- */
 .agent-status {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -763,10 +774,11 @@ input:checked+.slider:before {
 }
 
 .chat-area {
-        height: auto; /* Allow flexbox to control the height instead of a fixed 100vh */
-    }
+    height: auto;
+    /* Allow flexbox to control the height instead of a fixed 100vh */
+}
 
-    .chat-input-area {
-        /* Add padding to account for mobile device notches and home bars */
-        padding-bottom: calc(16px + env(safe-area-inset-bottom));
-    }
+.chat-input-area {
+    /* Add padding to account for mobile device notches and home bars */
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}

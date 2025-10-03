@@ -248,10 +248,13 @@ def api_chat():
 
     return Response(stream_with_context(generate_updates()), mimetype='text/event-stream')
             
-@app.route('/api/cancel', methods=['POST'])
 @app.route('/outputs/<filename>')
 def serve_screenshot(filename):
     """Serves a saved screenshot file from the 'outputs' directory."""
     return send_from_directory('outputs', filename)
+# NEW CHUNK to paste
 if __name__ == '__main__':
-    app.run(debug=True, port=8503, threaded=True)
+    # The port is dynamically set by Render. Default to 8503 for local dev.
+    port = int(os.environ.get('PORT', 8503))
+    # Running with debug=False is crucial for production
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

@@ -1,10 +1,20 @@
-# Environment variables
-.env
-
-# Google OAuth credentials and tokens
-token.json
-credentials.json
-
-# Python specific
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+
+# Environment
+.env
+
+# Sensitive Files
+credentials.json
+token.json
+tasks.sqlite
+
+# Output Files
+outputs/

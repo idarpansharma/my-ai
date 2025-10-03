@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Grass AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#EAEAEA" stroke-width="2"><path d="M2,12 C2,17.523 6.477,22 12,22 C17.523,22 22,17.523 22,12 M2,12 C2,6.477 6.477,2 12,2 C17.523,2 22,6.477 22,12 M2,12 H22 M12,2 C14.502,4.477 15.903,8.089 16,12 C15.903,15.911 14.502,19.523 12,22 C9.498,19.523 8.097,15.911 8,12 C8.097,8.089 9.498,4.477 12,2Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <h1>Grass AI</h1>
+            </div>
+            <h2>Welcome back</h2>
+            <p>Sign in to continue to your workspace.</p>
+            
+            <a href="/login" class="google-login-btn">
+                <svg class="google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.222,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.574l6.19,5.238C39.916,35.213,44,29.827,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg>
+                Sign in with Google
+            </a>
+
+            <div class="login-footer">
+                <a href="#">Terms of Service</a>
+                <span>•</span>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

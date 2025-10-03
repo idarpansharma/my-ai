@@ -1,4 +1,4 @@
-# functions/netlify_handler.py
+
 import json
 
 def handler(event, context):

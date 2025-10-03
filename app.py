@@ -15,7 +15,18 @@ if not os.path.exists('outputs'):
 app.secret_key = os.urandom(24)
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 CANCELLATION_FLAGS = {}
-
+if 'GOOGLE_CREDENTIALS_JSON' in os.environ:
+    creds_json_str = os.environ.get('GOOGLE_CREDENTIALS_JSON')
+    try:
+        # Validate if it's a valid JSON
+        json.loads(creds_json_str)
+        with open('credentials.json', 'w') as f:
+            f.write(creds_json_str)
+        print("Successfully created credentials.json from environment variable.")
+    except Exception as e:
+        print(f"ERROR: Could not write credentials.json file: {e}")
+else:
+    print("WARNING: GOOGLE_CREDENTIALS_JSON environment variable not found.")
 # --- Constants ---
 TOKEN_FILE = "token.json"
 CLIENT_SECRETS_FILE = 'credentials.json'

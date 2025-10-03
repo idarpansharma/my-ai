@@ -2,9 +2,11 @@
 
 [build]
   command = "pip install -r requirements.txt"
-  functions = "functions/" # The folder where your function file is
+  publish = "public"
+  functions = "netlify/functions/"
 
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/netlify_handler"
-  status = 200
+  status = 200git add .
+  

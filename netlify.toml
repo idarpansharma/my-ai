@@ -8,5 +8,4 @@
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/netlify_handler"
-  status = 200git add .
-  
+  status = 200

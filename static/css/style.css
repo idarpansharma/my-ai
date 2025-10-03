@@ -761,3 +761,12 @@ input:checked+.slider:before {
         transform: rotate(360deg);
     }
 }
+
+.chat-area {
+        height: auto; /* Allow flexbox to control the height instead of a fixed 100vh */
+    }
+
+    .chat-input-area {
+        /* Add padding to account for mobile device notches and home bars */
+        padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    }
